@@ -69,5 +69,42 @@ void solve() {
 
 ![telegram-cloud-photo-size-2-5451848919823806502-y](https://github.com/user-attachments/assets/e68c38cf-480e-4452-95c1-35568c3e5d54)
 
+# 3.3
 
+```cpp
+vector<vector<int>> g;
+vector<bool> used;
+
+void dfs(int v) {
+    used[v] = true;
+    for (int x : g[v])
+        if (!used[x]) dfs (x);
+}
+
+void solve() {
+    int n;
+    cin >> n;
+    g.resize(n);
+    used.resize(n);
+    for (int i = 0; i < n; i++) {
+        int k;
+        cin >> k;
+        for (int j = 0; j < k; j++) {
+            int x;
+            cin >> x;
+            g[i].push_back(x - 1);
+        }
+    }
+    int ans = 0;
+    for (int i = 0; i < n; i++) {
+        if (!used[i]) {
+            dfs(i);
+            ans++;
+        }
+    }
+    cout << ans;
+}
+
+```
+![telegram-cloud-photo-size-2-5451848919823806504-y](https://github.com/user-attachments/assets/a63a1ba6-7186-4039-a490-29e82438af66)
 
