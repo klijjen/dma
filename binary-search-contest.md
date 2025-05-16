@@ -79,7 +79,6 @@ void solve() {
             r = m;
         }
     }
-
     cout << l << endl;
     return;
 }
