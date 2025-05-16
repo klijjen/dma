@@ -49,3 +49,25 @@ void solve() {
     cout << ss << endl;
 }
 ```
+
+# 6.3
+
+```cpp
+void solve() {
+    int n;
+    cin >> n;
+    vector<pair<int, int>> s(n);
+    for (int i = 0; i < n; ++i) 
+        cin >> s[i].first >> s[i].second;
+    sort(s.begin(), s.end(), [](const pair<int, int>& a, const pair<int, int>& b) {
+        return a.second < b.second;
+    });
+    int cnt = 0, l = -1;
+    for (const auto& a : s)
+        if (a.first >= l) {
+            ++cnt;
+            l = a.second;
+        }
+    cout << cnt << endl;
+}
+```
