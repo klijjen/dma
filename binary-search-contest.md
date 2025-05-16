@@ -2,7 +2,7 @@
 
 # 1.1
 
-'''c++
+```cpp
 void solve() {
     int n, x;
     cin >> n >> x;
@@ -25,6 +25,6 @@ void solve() {
     cout << (res != -1 ? a[res] : -1) << endl;
     return;
 }
-'''
+```
 
 ![telegram-cloud-photo-size-2-5451848919823806461-y](https://github.com/user-attachments/assets/2f256efa-6d74-4054-bda0-3682b2bfec12)
